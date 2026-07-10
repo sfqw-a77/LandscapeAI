@@ -1315,6 +1315,9 @@ function setStepState(id, state) {
 }
 
 // ===== API CALL =====
+var apiRetryCount = 0;
+var MAX_API_RETRIES = 1;
+
 async function callReviewAPI() {
   var desc = document.getElementById('descInput').value.trim();
 
@@ -1337,6 +1340,7 @@ async function callReviewAPI() {
 
     clearTimeout(timeoutId);
     forceReviewFlag = false;
+    apiRetryCount = 0;
 
     var data = await response.json();
 
@@ -1359,9 +1363,26 @@ async function callReviewAPI() {
     showResult();
   } catch (err) {
     if (err.name === 'AbortError') {
-      showError('请求超时', 'AI 服务响应较慢，请检查后端日志或稍后重试');
+      if (apiRetryCount < MAX_API_RETRIES) {
+        apiRetryCount++;
+        document.getElementById('loadingTitle').textContent = '正在重新连接服务...';
+        document.getElementById('loadingSubtitle').textContent = '服务正在唤醒中，请稍候';
+        setTimeout(function() { callReviewAPI(); }, 3000);
+      } else {
+        showError('请求超时', 'AI 服务响应较慢，请稍后点击重试');
+      }
     } else {
-      showError('网络错误', '无法连接到服务器，请检查网络后重试');
+      // 网络错误可能是服务冷启动，自动重试一次
+      if (apiRetryCount < MAX_API_RETRIES) {
+        apiRetryCount++;
+        document.getElementById('loadingTitle').textContent = '正在唤醒服务...';
+        document.getElementById('loadingSubtitle').textContent = '首次访问需 30-60 秒启动，请稍候';
+        document.getElementById('loadingExtra').classList.add('show');
+        document.getElementById('loadingExtra').textContent = '服务正在冷启动中，这是 Railway 免费层的正常行为，首次唤醒后后续访问都会很快。';
+        setTimeout(function() { callReviewAPI(); }, 5000);
+      } else {
+        showError('网络错误', '服务可能正在冷启动，请点击重试按钮再次尝试');
+      }
     }
   }
 }
