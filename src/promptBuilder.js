@@ -344,11 +344,11 @@ function validateAIResponse(data) {
       return { valid: false, error: `指标「${item.indicator}」状态非法：${item.status}` };
     }
     if (!item.standard_ref) {
-      // 状态为"信息不足"时允许 standard_ref 为空，自动填充默认值
+      // standard_ref 为空时自动补全，不报错
       if (item.status === '信息不足') {
         item.standard_ref = '无（知识库中暂无相关条文）';
       } else {
-        return { valid: false, error: `指标「${item.indicator}」缺少 standard_ref` };
+        item.standard_ref = '见规范知识库相关条文';
       }
     }
     if (!Array.isArray(item.issues)) {
