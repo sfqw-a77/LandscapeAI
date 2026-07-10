@@ -1,0 +1,1541 @@
+[
+  {
+    "id": "GB50016-7.1.8",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.8条",
+    "content": "消防车道宽度不应小于4.0m，净高度不应小于4.0m，转弯半径应满足消防车通行要求",
+    "review_point": "检查消防通道宽度是否≥4.0m，净高是否≥4.0m"
+  },
+  {
+    "id": "GB50016-7.1.4",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.4条",
+    "content": "消防车道边缘距离建筑外墙不宜小于5.0m",
+    "review_point": "检查消防车道与建筑外墙距离是否≥5.0m"
+  },
+  {
+    "id": "GB50016-7.1.1",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.1条",
+    "content": "街区内的道路应考虑消防车的通行，道路中心线间的距离不宜大于160m",
+    "review_point": "检查道路间距是否≤160m"
+  },
+  {
+    "id": "GB50016-7.1.2",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.2条",
+    "content": "消防车道的坡度不宜大于8%，坡长不应大于30m",
+    "review_point": "检查消防车道坡度是否≤8%，坡长是否≤30m"
+  },
+  {
+    "id": "GB50016-7.1.3",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.3条",
+    "content": "消防车道与工厂（仓库）、民用建筑之间不应设置妨碍消防车操作的树木、架空管线等障碍物",
+    "review_point": "检查消防车道两侧是否有障碍物"
+  },
+  {
+    "id": "GB50016-7.1.6",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.6条",
+    "content": "尽头式消防车道应设置回车道或回车场，回车场的面积不应小于12m×12m；供大型消防车使用时不应小于15m×15m",
+    "review_point": "检查尽头式消防车道是否设置回车场及面积是否满足要求"
+  },
+  {
+    "id": "GB50016-7.1.9",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.9条",
+    "content": "消防车道下的管道和暗沟等应能承受大型消防车的压力",
+    "review_point": "检查消防车道下管道和暗沟的承载能力"
+  },
+  {
+    "id": "GB50016-7.1.5",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.5条",
+    "content": "消防车道不宜与铁路正线平交，如必须平交应设置备用车道，两车道间距不应小于30m",
+    "review_point": "检查消防车道与铁路交叉情况"
+  },
+  {
+    "id": "GB50016-8.1.2",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第8.1.2条",
+    "content": "民用建筑应设置室外消火栓系统，消火栓沿道路布置，间距不应大于120m",
+    "review_point": "检查室外消火栓间距是否≤120m"
+  },
+  {
+    "id": "GB50016-8.1.3",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第8.1.3条",
+    "content": "室外消火栓的保护半径不应大于150m",
+    "review_point": "检查消火栓保护半径是否覆盖全部建筑"
+  },
+  {
+    "id": "GB50016-5.2.2",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第5.2.2条",
+    "content": "民用建筑之间的防火间距应符合规定，多层建筑之间不应小于6m，高层建筑与多层建筑之间不应小于9m",
+    "review_point": "检查建筑间防火间距是否满足要求"
+  },
+  {
+    "id": "GB50016-7.2.1",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.2.1条",
+    "content": "高层建筑应至少沿一个长边或周边长度的一半设置消防车登高操作场地",
+    "review_point": "检查高层建筑是否设置消防登高场地"
+  },
+  {
+    "id": "GB50016-7.2.2",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.2.2条",
+    "content": "消防车登高操作场地的长度和宽度分别不应小于15m和10m，场地坡度不宜大于3%",
+    "review_point": "检查登高场地尺寸和坡度"
+  },
+  {
+    "id": "GB50016-7.2.3",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.2.3条",
+    "content": "消防车登高操作场地应与消防车道连通，场地靠建筑外墙一侧的边缘距离建筑外墙不宜小于5m且不应大于10m",
+    "review_point": "检查登高场地与建筑距离"
+  },
+  {
+    "id": "GB50016-7.1.7",
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clause_number": "第7.1.7条",
+    "content": "消防车道应畅通无阻，不应设置隔离桩、栅栏等固定障碍物，如需设置应保证紧急情况下可迅速移除",
+    "review_point": "检查消防车道是否有固定障碍物"
+  },
+  {
+    "id": "GB50763-3.4.2",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.4.2条",
+    "content": "轮椅坡道的坡度不应大于1:12，每段坡道高度不应大于0.8m，水平长度不应大于9.0m",
+    "review_point": "检查坡道坡度是否≤1:12，每段高度是否≤0.8m"
+  },
+  {
+    "id": "GB50763-3.3.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.3.1条",
+    "content": "无障碍通道宽度不应小于1.2m，入口平台宽度不应小于1.5m",
+    "review_point": "检查无障碍通道宽度是否≥1.2m"
+  },
+  {
+    "id": "GB50763-3.3.2",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.3.2条",
+    "content": "无障碍通道有高差时应设坡道，坡道坡度不应大于1:12；当高差小于50mm时可设斜坡",
+    "review_point": "检查通道高差处是否设坡道"
+  },
+  {
+    "id": "GB50763-3.4.3",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.4.3条",
+    "content": "轮椅坡道应设置扶手，扶手高度应为0.85m-0.90m，扶手应保持连贯",
+    "review_point": "检查坡道是否设置扶手及高度"
+  },
+  {
+    "id": "GB50763-3.4.4",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.4.4条",
+    "content": "轮椅坡道的坡面应平整、防滑，坡面不应设门槛",
+    "review_point": "检查坡道坡面是否防滑"
+  },
+  {
+    "id": "GB50763-3.4.5",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.4.5条",
+    "content": "轮椅坡道转弯处应设休息平台，平台净宽不应小于1.5m",
+    "review_point": "检查坡道转弯处平台宽度"
+  },
+  {
+    "id": "GB50763-3.5.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.5.1条",
+    "content": "无障碍出入口应设置提示盲道，宽度不应小于0.3m",
+    "review_point": "检查出入口是否设提示盲道"
+  },
+  {
+    "id": "GB50763-3.5.2",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.5.2条",
+    "content": "无障碍出入口的门不应设门槛，如必须设置门槛高度不应大于15mm",
+    "review_point": "检查出入口门槛高度"
+  },
+  {
+    "id": "GB50763-3.6.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.6.1条",
+    "content": "无障碍楼梯的踏步宽度不应小于0.28m，踏步高度不应大于0.16m",
+    "review_point": "检查无障碍楼梯踏步尺寸"
+  },
+  {
+    "id": "GB50763-3.6.2",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.6.2条",
+    "content": "无障碍楼梯应设置扶手，扶手起点和终点应水平延伸不小于0.3m",
+    "review_point": "检查楼梯扶手延伸长度"
+  },
+  {
+    "id": "GB50763-3.7.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.7.1条",
+    "content": "无障碍厕所的面积不应小于2.0m×2.0m，门应向外开启",
+    "review_point": "检查无障碍厕所面积和门开启方向"
+  },
+  {
+    "id": "GB50763-3.8.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.8.1条",
+    "content": "无障碍停车位应靠近出入口设置，停车位宽度不应小于3.5m",
+    "review_point": "检查无障碍停车位宽度和位置"
+  },
+  {
+    "id": "GB50763-3.8.2",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.8.2条",
+    "content": "无障碍停车位应设置轮椅通道，宽度不应小于1.2m",
+    "review_point": "检查无障碍停车位是否设轮椅通道"
+  },
+  {
+    "id": "GB50763-3.9.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.9.1条",
+    "content": "无障碍标识应清晰醒目，应使用无障碍国际通用标志",
+    "review_point": "检查是否设置无障碍标识"
+  },
+  {
+    "id": "GB50763-3.10.1",
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clause_number": "第3.10.1条",
+    "content": "人行道应设置缘石坡道，坡度不应大于1:20，宽度不应小于1.2m",
+    "review_point": "检查人行道缘石坡道设置"
+  },
+  {
+    "id": "GB50180-4.0.2",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.2条",
+    "content": "新建居住区绿地率不应低于30%，旧区改建项目不应低于25%",
+    "review_point": "检查绿地率是否≥30%（新建）或≥25%（旧区改建）"
+  },
+  {
+    "id": "GB50180-4.0.3",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.3条",
+    "content": "居住区内绿地应按各级公共绿地和宅旁绿地分类设置，公共绿地面积不应低于总绿地面积的40%",
+    "review_point": "检查公共绿地占比是否≥40%"
+  },
+  {
+    "id": "GB50180-4.0.4",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.4条",
+    "content": "居住区公园面积不应小于1.0ha，小区游园面积不应小于0.4ha，组团绿地面积不应小于0.04ha",
+    "review_point": "检查各级绿地面积是否满足要求"
+  },
+  {
+    "id": "GB50180-4.0.5",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.5条",
+    "content": "组团绿地的设置应满足有不少于1/3的绿地面积在标准建筑日照阴影线范围之外",
+    "review_point": "检查组团绿地日照条件"
+  },
+  {
+    "id": "GB50180-4.0.6",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.6条",
+    "content": "绿地率计算时，距建筑外墙1.5m和道路路缘1.0m范围内的不计入绿地面积",
+    "review_point": "检查绿地面积计算方法"
+  },
+  {
+    "id": "GB50180-4.0.7",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.7条",
+    "content": "地下建筑顶板覆土种植可计入绿地面积，覆土厚度不应小于0.6m，计入比例不应超过50%",
+    "review_point": "检查屋顶绿地计入比例"
+  },
+  {
+    "id": "GB50180-4.0.8",
+    "indicator": "种植设计",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.8条",
+    "content": "居住区集中绿地应设置不少于总绿地面积25%的乔木种植区",
+    "review_point": "检查乔木种植比例"
+  },
+  {
+    "id": "GB50180-4.0.9",
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.9条",
+    "content": "新区建设绿地率不应低于30%，其中旧区改建可适当降低但不应低于25%",
+    "review_point": "区分新建和改建项目的绿地率要求"
+  },
+  {
+    "id": "GB50180-5.0.6",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.6条",
+    "content": "居住区机动车停车位配建指标应根据户型、户数确定，一般不少于0.8辆/户",
+    "review_point": "检查停车位数量是否满足配建要求（≥0.8辆/户）"
+  },
+  {
+    "id": "GB50180-5.0.7",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.7条",
+    "content": "地面停车率不宜大于10%，即地面停车位数量不宜超过总停车位数量的10%",
+    "review_point": "检查地面停车率是否≤10%"
+  },
+  {
+    "id": "GB50180-5.0.8",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.8条",
+    "content": "机动车停车位尺寸不应小于2.5m×5.0m，无障碍停车位宽度不应小于3.5m",
+    "review_point": "检查停车位尺寸是否满足要求"
+  },
+  {
+    "id": "GB50180-5.0.9",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.9条",
+    "content": "居住区应配置非机动车停车位，配建指标不宜小于1.5辆/户",
+    "review_point": "检查非机动车停车位数量"
+  },
+  {
+    "id": "GB50180-5.0.10",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.10条",
+    "content": "停车场出入口应设置缓冲段，距道路红线不应小于7.5m，坡度不应大于5%",
+    "review_point": "检查停车场出入口设置"
+  },
+  {
+    "id": "GB50180-5.0.11",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.11条",
+    "content": "地面停车场应进行绿化遮荫，乔木种植率不应低于停车场面积的30%",
+    "review_point": "检查停车场绿化遮荫"
+  },
+  {
+    "id": "GB50180-5.0.12",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.12条",
+    "content": "访客停车位应设置在小区出入口附近，数量不宜少于总停车位的5%",
+    "review_point": "检查访客停车位设置"
+  },
+  {
+    "id": "GB50180-5.0.13",
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第5.0.13条",
+    "content": "机动车停车场内通道宽度单向不应小于3.0m，双向不应小于6.0m",
+    "review_point": "检查停车场通道宽度"
+  },
+  {
+    "id": "CJJ48-6.2.3",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.3条",
+    "content": "台阶踏步宽度不应小于0.3m，踏步高度不应大于0.15m，台阶数量不应少于2级",
+    "review_point": "检查台阶踏步宽是否≥0.3m，高度是否≤0.15m"
+  },
+  {
+    "id": "CJJ48-6.2.4",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.4条",
+    "content": "坡道坡度不应大于1:8，当坡度大于1:12时应设防滑措施",
+    "review_point": "检查坡道坡度是否≤1:8"
+  },
+  {
+    "id": "CJJ48-6.2.5",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.5条",
+    "content": "台阶连续踏步数超过18级时，应设置休息平台，平台宽度不应小于1.5m",
+    "review_point": "检查台阶是否设置休息平台"
+  },
+  {
+    "id": "CJJ48-6.2.6",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.6条",
+    "content": "台阶和坡道面层应采用防滑材料，摩擦系数不应小于0.5",
+    "review_point": "检查台阶坡道防滑措施"
+  },
+  {
+    "id": "CJJ48-6.2.7",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.7条",
+    "content": "室外台阶临空一侧应设置护栏或栏杆，栏杆高度不应小于1.05m",
+    "review_point": "检查台阶栏杆高度"
+  },
+  {
+    "id": "CJJ48-6.2.8",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.8条",
+    "content": "园路纵坡坡度不应大于8%，当纵坡大于8%时应设台阶，横坡坡度应为1%-2%",
+    "review_point": "检查园路纵坡和横坡"
+  },
+  {
+    "id": "CJJ48-6.2.9",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.9条",
+    "content": "主园路纵坡不宜大于5%，次园路纵坡不宜大于8%，小路纵坡不宜大于12%",
+    "review_point": "检查各级园路纵坡"
+  },
+  {
+    "id": "CJJ48-6.2.10",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第6.2.10条",
+    "content": "无障碍园路宽度不应小于1.5m，坡度不应大于1:12",
+    "review_point": "检查无障碍园路宽度和坡度"
+  },
+  {
+    "id": "CJJ48-7.3.2",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.2条",
+    "content": "景观水体近岸2.0m范围内水深不应大于0.7m，超过时应设置防护设施",
+    "review_point": "检查景观水景最大水深是否≤0.7m"
+  },
+  {
+    "id": "CJJ48-7.3.3",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.3条",
+    "content": "景观水体深度大于0.7m时，近岸应设置护栏，护栏高度不应小于1.05m",
+    "review_point": "检查深水区护栏设置"
+  },
+  {
+    "id": "CJJ48-7.3.4",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.4条",
+    "content": "人工水池池壁应设置安全防护措施，溢水口应设置格栅，格栅间隙不应大于20mm",
+    "review_point": "检查水池安全防护"
+  },
+  {
+    "id": "CJJ48-7.3.5",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.5条",
+    "content": "儿童活动场地附近的水景设计，水深不应大于0.3m",
+    "review_point": "检查儿童活动区附近水景水深"
+  },
+  {
+    "id": "CJJ48-7.3.6",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.6条",
+    "content": "水景驳岸设计应考虑安全防护，硬质驳岸近岸2.0m范围内水深不应大于0.5m",
+    "review_point": "检查驳岸附近水深"
+  },
+  {
+    "id": "CJJ48-7.3.7",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.7条",
+    "content": "跌水景观设计应设置安全防护措施，跌水高度大于0.5m时应设置护栏或防护栏",
+    "review_point": "检查跌水景观安全防护"
+  },
+  {
+    "id": "CJJ48-7.3.8",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.3.8条",
+    "content": "景观水体应设置防水层和排水系统，排水设施应可靠",
+    "review_point": "检查水体防水和排水系统"
+  },
+  {
+    "id": "JGJ155-4.1.3",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.3条",
+    "content": "地下车库顶板种植覆土厚度不应小于0.6m，需满足顶板荷载要求",
+    "review_point": "检查覆土厚度是否≥0.6m，是否说明顶板荷载"
+  },
+  {
+    "id": "JGJ155-4.1.4",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.4条",
+    "content": "乔木种植覆土厚度不应小于0.9m，灌木不应小于0.6m，地被植物不应小于0.3m",
+    "review_point": "检查乔木覆土是否≥0.9m，灌木是否≥0.6m"
+  },
+  {
+    "id": "JGJ155-4.1.5",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.5条",
+    "content": "种植屋面覆土厚度应根据植物种类确定，简单式屋顶花园覆土厚度不宜小于0.15m",
+    "review_point": "检查屋顶花园覆土厚度"
+  },
+  {
+    "id": "JGJ155-4.1.6",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.6条",
+    "content": "地下车库顶板种植区应设置排水层，排水层厚度不应小于0.1m",
+    "review_point": "检查顶板种植区排水层"
+  },
+  {
+    "id": "JGJ155-4.1.7",
+    "indicator": "种植设计",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.7条",
+    "content": "种植土应满足植物生长要求，有机质含量不应低于3%，pH值应为6.0-8.0",
+    "review_point": "检查种植土理化指标"
+  },
+  {
+    "id": "JGJ155-4.1.8",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.8条",
+    "content": "顶板种植区应设置过滤层，防止种植土流失堵塞排水系统",
+    "review_point": "检查过滤层设置"
+  },
+  {
+    "id": "JGJ155-4.2.1",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.2.1条",
+    "content": "地下室顶板荷载应考虑种植土饱和水重、植物重和附加荷载，设计安全系数不应小于1.5",
+    "review_point": "检查顶板荷载计算"
+  },
+  {
+    "id": "JGJ155-4.2.2",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.2.2条",
+    "content": "覆土厚度超过1.5m时，应进行专项结构验算",
+    "review_point": "检查超厚覆土结构验算"
+  },
+  {
+    "id": "JGJ155-4.2.3",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.2.3条",
+    "content": "种植区应设置自动灌溉系统，灌溉用水应优先利用雨水回收水",
+    "review_point": "检查灌溉系统设置"
+  },
+  {
+    "id": "JGJ155-4.3.1",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.3.1条",
+    "content": "地下室顶板防水等级不应低于二级，应设置耐根穿刺防水层",
+    "review_point": "检查顶板防水等级"
+  },
+  {
+    "id": "JGJ155-4.3.2",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.3.2条",
+    "content": "种植屋面应设置两道及以上防水层，其中至少一道为耐根穿刺防水层",
+    "review_point": "检查防水层数量和类型"
+  },
+  {
+    "id": "JGJ155-4.3.3",
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.3.3条",
+    "content": "顶板种植区应设置渗水收集系统，将多余水分排至雨水收集池",
+    "review_point": "检查渗水收集系统"
+  },
+  {
+    "id": "GB50420-3.0.4",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第3.0.4条",
+    "content": "城市绿地设计应符合绿地系统规划的要求，绿地率指标应符合当地城市规划管理规定",
+    "review_point": "检查绿地率是否符合规划要求"
+  },
+  {
+    "id": "GB50420-3.0.5",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第3.0.5条",
+    "content": "城市绿地内乔木种植比例不应小于绿地面积的40%，灌木不应小于20%",
+    "review_point": "检查乔灌木种植比例"
+  },
+  {
+    "id": "GB50420-3.0.6",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第3.0.6条",
+    "content": "城市绿地应采用乡土树种，乡土树种比例不应小于70%",
+    "review_point": "检查乡土树种比例"
+  },
+  {
+    "id": "GB50420-3.0.7",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第3.0.7条",
+    "content": "城市绿地内铺装面积不应大于绿地面积的30%，透水铺装率不应小于50%",
+    "review_point": "检查铺装面积和透水铺装比例"
+  },
+  {
+    "id": "GB50420-4.0.3",
+    "indicator": "覆土",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.3条",
+    "content": "城市绿地种植土层厚度不应小于0.6m，屋顶花园种植土层厚度不应小于0.3m",
+    "review_point": "检查种植土层厚度"
+  },
+  {
+    "id": "GB50420-4.0.4",
+    "indicator": "覆土",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.4条",
+    "content": "绿地内地下设施上方覆土厚度不应小于1.0m，确保植物正常生长",
+    "review_point": "检查地下设施上方覆土厚度"
+  },
+  {
+    "id": "GB50420-4.0.5",
+    "indicator": "台阶及坡度",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.5条",
+    "content": "绿地内道路坡度不应大于8%，大于8%时应设台阶，道路横坡应为1%-3%",
+    "review_point": "检查绿地道路坡度"
+  },
+  {
+    "id": "GB50420-4.0.6",
+    "indicator": "水深",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.6条",
+    "content": "绿地内水体设计应考虑安全防护，岸边2.0m范围内水深不应大于0.7m",
+    "review_point": "检查绿地水体安全"
+  },
+  {
+    "id": "GB50420-4.0.7",
+    "indicator": "消防",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.7条",
+    "content": "城市绿地内消防车道设置应符合消防技术标准，消防车道宽度不应小于4.0m",
+    "review_point": "检查绿地内消防车道"
+  },
+  {
+    "id": "GB50420-4.0.8",
+    "indicator": "无障碍",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.8条",
+    "content": "城市绿地应设置无障碍通道，通道宽度不应小于1.5m，坡度不应大于1:12",
+    "review_point": "检查绿地无障碍通道"
+  },
+  {
+    "id": "GB50420-4.0.9",
+    "indicator": "停车位",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.9条",
+    "content": "城市公园应设置停车场，停车位数量应根据公园规模确定，不宜少于0.5个/100㎡建筑面积",
+    "review_point": "检查公园停车位配建"
+  },
+  {
+    "id": "GB50420-5.0.1",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.1条",
+    "content": "城市绿地设计应采用雨水回收利用系统，透水铺装面积不应小于铺装总面积的50%",
+    "review_point": "检查雨水回收和透水铺装"
+  },
+  {
+    "id": "GB50420-5.0.2",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.2条",
+    "content": "城市绿地内建筑占地率不应大于5%，构筑物占地率不应大于3%",
+    "review_point": "检查绿地内建筑占地率"
+  },
+  {
+    "id": "GB50420-5.0.3",
+    "indicator": "台阶及坡度",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.3条",
+    "content": "绿地内台阶踏步宽度不应小于0.35m，高度不应大于0.14m",
+    "review_point": "检查绿地台阶尺寸"
+  },
+  {
+    "id": "GB50420-5.0.4",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.4条",
+    "content": "绿地内种植区土壤改良深度不应小于0.4m，土壤有机质含量不应低于3%",
+    "review_point": "检查土壤改良深度"
+  },
+  {
+    "id": "GB50420-5.0.5",
+    "indicator": "水深",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.5条",
+    "content": "人工湖、水池等水景面积不宜大于绿地总面积的15%",
+    "review_point": "检查水景面积占比"
+  },
+  {
+    "id": "GB50420-5.0.6",
+    "indicator": "无障碍",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.6条",
+    "content": "公园主要出入口应设置无障碍坡道，坡度不应大于1:20",
+    "review_point": "检查公园出入口无障碍"
+  },
+  {
+    "id": "GB50420-6.0.1",
+    "indicator": "消防",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第6.0.1条",
+    "content": "城市绿地内应设置消防水源，消火栓间距不应大于120m",
+    "review_point": "检查绿地内消防水源设置"
+  },
+  {
+    "id": "CJJ37-5.2.1",
+    "indicator": "消防",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.2.1条",
+    "content": "城市道路设计中应考虑消防车通行要求，道路净宽不应小于4.0m，净高不应小于4.0m",
+    "review_point": "检查道路净宽和净高是否满足消防车通行"
+  },
+  {
+    "id": "CJJ37-5.2.2",
+    "indicator": "消防",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.2.2条",
+    "content": "消防车道转弯半径内径不应小于9.0m，外径不应小于12.0m",
+    "review_point": "检查消防车道转弯半径"
+  },
+  {
+    "id": "CJJ37-5.2.3",
+    "indicator": "台阶及坡度",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.2.3条",
+    "content": "城市道路纵坡不应大于8%，非机动车道纵坡不应大于3.5%，人行道纵坡不应大于5%",
+    "review_point": "检查各类道路纵坡"
+  },
+  {
+    "id": "CJJ37-5.2.4",
+    "indicator": "竖向与排水",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.2.4条",
+    "content": "人行道横坡应为1%-2%，非机动车道横坡应为1%-2%，机动车道横坡应为1.5%-2.5%",
+    "review_point": "检查各类道路横坡"
+  },
+  {
+    "id": "CJJ37-5.3.1",
+    "indicator": "无障碍",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.3.1条",
+    "content": "人行道在交叉路口应设置缘石坡道，坡度不应大于1:20，宽度不应小于1.2m",
+    "review_point": "检查交叉路口缘石坡道"
+  },
+  {
+    "id": "CJJ37-5.3.2",
+    "indicator": "无障碍",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.3.2条",
+    "content": "人行道应设置盲道，行进盲道宽度不应小于0.4m，提示盲道宽度不应小于0.3m",
+    "review_point": "检查盲道设置"
+  },
+  {
+    "id": "CJJ37-5.3.3",
+    "indicator": "无障碍",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.3.3条",
+    "content": "道路无障碍设施应连续贯通，不应被井盖、电杆等设施阻断",
+    "review_point": "检查无障碍设施连续性"
+  },
+  {
+    "id": "CJJ37-6.1.1",
+    "indicator": "台阶及坡度",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第6.1.1条",
+    "content": "居住区内道路分为居住区道路、小区路、组团路和宅间小路，宽度分别不应小于20m、9m、6m和3m",
+    "review_point": "检查各级道路宽度"
+  },
+  {
+    "id": "CJJ37-6.2.1",
+    "indicator": "消防",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第6.2.1条",
+    "content": "居住区道路应满足消防车和救护车通行，路面宽度不应小于4.0m",
+    "review_point": "检查居住区道路宽度"
+  },
+  {
+    "id": "CJJ37-6.2.2",
+    "indicator": "消防",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第6.2.2条",
+    "content": "尽端式道路应设置回车场，回车场面积不应小于12m×12m",
+    "review_point": "检查尽端道路回车场"
+  },
+  {
+    "id": "CJJ37-7.1.1",
+    "indicator": "无障碍",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第7.1.1条",
+    "content": "人行天桥和地道应设置轮椅坡道或升降平台，坡道坡度不应大于1:12",
+    "review_point": "检查天桥地道无障碍"
+  },
+  {
+    "id": "CJJ37-7.2.1",
+    "indicator": "台阶及坡度",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第7.2.1条",
+    "content": "人行道台阶踏步宽度不应小于0.30m，高度不应大于0.15m",
+    "review_point": "检查人行道台阶尺寸"
+  },
+  {
+    "id": "CJJ37-7.3.1",
+    "indicator": "停车位",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第7.3.1条",
+    "content": "路边停车位的设置不应影响消防车通行，停车后道路剩余宽度不应小于4.0m",
+    "review_point": "检查路边停车对消防通道影响"
+  },
+  {
+    "id": "CJJ37-8.1.1",
+    "indicator": "消防",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第8.1.1条",
+    "content": "消防车道应设置明显标识，禁止占用和堵塞",
+    "review_point": "检查消防车道标识"
+  },
+  {
+    "id": "CJJ37-8.2.1",
+    "indicator": "无障碍",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第8.2.1条",
+    "content": "道路交叉口盲道应连续，路口转角处应设置提示盲道",
+    "review_point": "检查交叉口盲道连续性"
+  },
+  {
+    "id": "GB51192-5.1.1",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.1.1条",
+    "content": "公园内自然水体应设置安全防护设施，人工水景近岸2.0m范围内水深不应大于0.7m",
+    "review_point": "检查公园水景近岸水深"
+  },
+  {
+    "id": "GB51192-5.1.2",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.1.2条",
+    "content": "公园内溪流设计水深不应大于0.4m，流速不应大于1.0m/s",
+    "review_point": "检查溪流设计参数"
+  },
+  {
+    "id": "GB51192-5.2.1",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.2.1条",
+    "content": "公园主路纵坡不应大于5%，支路纵坡不应大于8%，小路纵坡不应大于12%",
+    "review_point": "检查公园各级道路纵坡"
+  },
+  {
+    "id": "GB51192-5.2.2",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.2.2条",
+    "content": "公园道路横坡应为1%-3%，当横坡大于3%时应设防滑措施",
+    "review_point": "检查公园道路横坡"
+  },
+  {
+    "id": "GB51192-5.3.1",
+    "indicator": "覆土",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.3.1条",
+    "content": "公园绿地种植土层厚度不应小于0.6m，乔灌木种植区不应小于0.9m",
+    "review_point": "检查公园种植土层厚度"
+  },
+  {
+    "id": "GB51192-5.3.2",
+    "indicator": "覆土",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.3.2条",
+    "content": "公园地下设施上方覆土厚度不应小于1.2m，确保大型乔木种植需求",
+    "review_point": "检查公园地下设施覆土"
+  },
+  {
+    "id": "GB51192-6.1.1",
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第6.1.1条",
+    "content": "儿童活动区域附近严禁设置深水区，水深不应大于0.3m",
+    "review_point": "检查儿童活动区附近水深"
+  },
+  {
+    "id": "GB51192-6.1.2",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第6.1.2条",
+    "content": "儿童活动场地地面坡度不应大于3%，应采用软质铺装",
+    "review_point": "检查儿童活动场地坡度"
+  },
+  {
+    "id": "GB51192-6.2.1",
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第6.2.1条",
+    "content": "公园无障碍通道宽度不应小于1.5m，坡度不应大于1:12，转弯处平台不应小于1.5m×1.5m",
+    "review_point": "检查公园无障碍通道"
+  },
+  {
+    "id": "GB51192-6.2.2",
+    "indicator": "无障碍",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第6.2.2条",
+    "content": "公园主要出入口应设置无障碍坡道，宽度不应小于1.8m",
+    "review_point": "检查公园出入口无障碍"
+  },
+  {
+    "id": "GB51192-7.1.1",
+    "indicator": "覆土",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第7.1.1条",
+    "content": "公园内屋顶花园覆土厚度不应小于0.3m，应设置排水层和过滤层",
+    "review_point": "检查屋顶花园覆土"
+  },
+  {
+    "id": "GB51192-7.2.1",
+    "indicator": "消防",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第7.2.1条",
+    "content": "公园内消防车道宽度不应小于4.0m，净空高度不应小于4.0m",
+    "review_point": "检查公园消防车道"
+  },
+  {
+    "id": "GBT51346-4.2.1",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第4.2.1条",
+    "content": "城市规划建设用地结构中绿地占比不应小于10%，居住用地绿地率不应低于30%",
+    "review_point": "检查规划绿地率指标"
+  },
+  {
+    "id": "GBT51346-4.2.2",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第4.2.2条",
+    "content": "人均公园绿地面积不应小于8.0㎡/人",
+    "review_point": "检查人均公园绿地面积"
+  },
+  {
+    "id": "GBT51346-4.3.1",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第4.3.1条",
+    "content": "综合公园面积不应小于5ha，社区公园面积不应小于1ha",
+    "review_point": "检查公园面积"
+  },
+  {
+    "id": "GBT51346-4.3.2",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第4.3.2条",
+    "content": "带状公园宽度不应小于20m，街旁绿地面积不应小于400㎡",
+    "review_point": "检查带状公园和街旁绿地"
+  },
+  {
+    "id": "GBT51346-4.4.1",
+    "indicator": "停车位",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第4.4.1条",
+    "content": "公园绿地应配建机动车停车场，配建指标不宜小于0.5个/100㎡绿地面积",
+    "review_point": "检查公园停车场配建"
+  },
+  {
+    "id": "GBT51346-4.4.2",
+    "indicator": "停车位",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第4.4.2条",
+    "content": "公园内地面停车位不应超过总停车位数量的30%，地下停车比例不应低于70%",
+    "review_point": "检查公园地面停车比例"
+  },
+  {
+    "id": "GBT51346-5.1.1",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第5.1.1条",
+    "content": "防护绿地宽度应根据防护功能确定，卫生隔离防护林带宽度不应小于50m",
+    "review_point": "检查防护绿地宽度"
+  },
+  {
+    "id": "GBT51346-5.2.1",
+    "indicator": "覆土",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第5.2.1条",
+    "content": "城市绿地地下空间开发利用时，顶板覆土厚度不应小于1.5m",
+    "review_point": "检查地下空间顶板覆土"
+  },
+  {
+    "id": "GBT51346-5.3.1",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第5.3.1条",
+    "content": "城市绿地中乔木覆盖率不应小于绿地面积的50%，常绿乔木比例不宜小于30%",
+    "review_point": "检查乔木覆盖率"
+  },
+  {
+    "id": "GBT51346-5.4.1",
+    "indicator": "绿地率",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第5.4.1条",
+    "content": "城市绿地规划应保障绿地连通性，绿地间连接通道宽度不应小于10m",
+    "review_point": "检查绿地连通性"
+  },
+  {
+    "id": "DB32T3694-4.1.1",
+    "indicator": "绿地率",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第4.1.1条",
+    "content": "道路绿地率应符合规定，园林景观路绿地率不应小于40%，红线宽度大于50m的道路绿地率不应小于30%",
+    "review_point": "检查道路绿地率"
+  },
+  {
+    "id": "DB32T3694-4.2.1",
+    "indicator": "消防",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第4.2.1条",
+    "content": "道路设计应满足消防车通行，车道宽度不应小于4.0m，转弯半径不应小于9.0m",
+    "review_point": "检查道路消防通行条件"
+  },
+  {
+    "id": "DB32T3694-4.3.1",
+    "indicator": "无障碍",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第4.3.1条",
+    "content": "道路无障碍设计应连续贯通，人行道宽度不应小于2.0m，坡度不应大于5%",
+    "review_point": "检查道路无障碍设计"
+  },
+  {
+    "id": "DB32T3694-4.4.1",
+    "indicator": "台阶及坡度",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第4.4.1条",
+    "content": "道路交叉口转弯半径应满足车辆通行要求，一般交叉口转弯半径不应小于10m",
+    "review_point": "检查交叉口转弯半径"
+  },
+  {
+    "id": "DB32T3694-4.5.1",
+    "indicator": "停车位",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第4.5.1条",
+    "content": "道路两侧停车设计不得影响消防车通行，设置停车位后道路有效宽度不应小于4.0m",
+    "review_point": "检查道路停车对消防通道影响"
+  },
+  {
+    "id": "DB32T3694-5.1.1",
+    "indicator": "种植设计",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第5.1.1条",
+    "content": "道路绿化带种植土层厚度不应小于0.6m，行道树种植穴深度不应小于0.8m",
+    "review_point": "检查道路绿化种植土层"
+  },
+  {
+    "id": "DB32T3694-5.2.1",
+    "indicator": "水深",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第5.2.1条",
+    "content": "道路景观水体设计应考虑排水安全，蓄水深度不应大于0.5m",
+    "review_point": "检查道路景观水体深度"
+  },
+  {
+    "id": "DB32T3694-5.3.1",
+    "indicator": "绿地率",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第5.3.1条",
+    "content": "道路中央分隔带绿化宽度不应小于2.0m，两侧分隔带宽度不应小于1.5m",
+    "review_point": "检查道路分隔带绿化宽度"
+  },
+  {
+    "id": "DB32T3694-5.4.1",
+    "indicator": "消防",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第5.4.1条",
+    "content": "道路消防设施应沿道路均匀布置，消火栓间距不应大于120m，保护半径不应大于150m",
+    "review_point": "检查道路消防设施布置"
+  },
+  {
+    "id": "DB32T3694-6.1.1",
+    "indicator": "无障碍",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第6.1.1条",
+    "content": "道路人行横道应设置缘石坡道，坡度不应大于1:20，坡口宽度不应小于1.2m",
+    "review_point": "检查人行横道缘石坡道"
+  },
+  {
+    "id": "DB32T3694-6.2.1",
+    "indicator": "台阶及坡度",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第6.2.1条",
+    "content": "道路人行道纵坡不应大于5%，当纵坡大于5%时应设置台阶",
+    "review_point": "检查人行道纵坡和台阶设置"
+  },
+  {
+    "id": "DB32T3694-6.3.1",
+    "indicator": "停车位",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第6.3.1条",
+    "content": "道路临时停车区应设置绿化隔离带，宽度不应小于1.5m",
+    "review_point": "检查临时停车区绿化"
+  },
+  {
+    "id": "DB32T3694-7.1.1",
+    "indicator": "覆土",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第7.1.1条",
+    "content": "道路地下管线上方覆土厚度不应小于0.6m，确保植物根系生长空间",
+    "review_point": "检查道路管线上方覆土"
+  },
+  {
+    "id": "GB50420-4.0.2-DRAIN",
+    "indicator": "竖向与排水",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.2条",
+    "content": "绿地内场地整平标高应高于周边道路标高0.3m以上，确保场地排水顺畅不积水",
+    "review_point": "检查场地标高与道路标高的关系，是否高于道路0.3m以上"
+  },
+  {
+    "id": "CJJ48-7.1.1",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.1.1条",
+    "content": "公园场地竖向设计应充分利用自然地形，场地最小排水坡度不应小于0.3%，草地排水坡度应为0.5%-2%",
+    "review_point": "检查场地最小排水坡度是否≥0.3%，草地坡度是否在0.5%-2%范围内"
+  },
+  {
+    "id": "CJJ48-7.1.2",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.1.2条",
+    "content": "铺装场地排水坡度应为0.5%-1.5%，运动场地排水坡度应为0.2%-0.5%，排水方向应避免穿越活动区域",
+    "review_point": "检查铺装场地和运动场地的排水坡度是否在规定范围内"
+  },
+  {
+    "id": "CJJ48-7.1.3",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.1.3条",
+    "content": "公园内雨水口设置间距不应大于30m，雨水口应设在汇水区域的最低点",
+    "review_point": "检查雨水口间距是否≤30m，是否设在最低点"
+  },
+  {
+    "id": "CJJ48-7.1.4",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.1.4条",
+    "content": "地下车库出入口应设反坡设计，出入口处反坡高度不应小于0.15m，防止雨水倒灌",
+    "review_point": "检查地下车库出入口是否设反坡，反坡高度是否≥0.15m"
+  },
+  {
+    "id": "CJJ48-7.1.5",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第7.1.5条",
+    "content": "下沉广场应设应急排水措施，排水能力不应小于50年一遇暴雨强度，应设置备用排水泵",
+    "review_point": "检查下沉广场是否有应急排水措施和备用排水泵"
+  },
+  {
+    "id": "GB51192-5.2.3",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.2.3条",
+    "content": "公园绿地内微地形设计坡度不宜超过1:3，超过时应设挡土墙或护坡措施",
+    "review_point": "检查微地形坡度是否≤1:3，超过时是否设挡土墙"
+  },
+  {
+    "id": "GB51192-5.2.4",
+    "indicator": "竖向与排水",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第5.2.4条",
+    "content": "公园场地排水应采用有组织排水，汇水面积超过500㎡时应设雨水收集设施",
+    "review_point": "检查是否采用有组织排水，汇水面积>500㎡时是否设雨水收集设施"
+  },
+  {
+    "id": "CJJ37-5.2.5",
+    "indicator": "竖向与排水",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第5.2.5条",
+    "content": "道路两侧应设置雨水收集设施，雨水口间距应根据汇水面积和降雨强度确定，一般为25-50m",
+    "review_point": "检查雨水口间距是否在25-50m范围内"
+  },
+  {
+    "id": "CJJ37-6.2.3",
+    "indicator": "竖向与排水",
+    "standard_name": "城市道路工程设计规范",
+    "standard_code": "CJJ 37-2012",
+    "clause_number": "第6.2.3条",
+    "content": "居住区内道路纵坡设计应与场地排水方向一致，道路最低点应设置雨水口",
+    "review_point": "检查道路纵坡方向是否与排水方向一致，最低点是否设雨水口"
+  },
+  {
+    "id": "DB32T3694-4.6.1",
+    "indicator": "竖向与排水",
+    "standard_name": "江苏省绿色道路设计标准",
+    "standard_code": "DB32/T 3694",
+    "clause_number": "第4.6.1条",
+    "content": "道路绿化带应设排水系统，绿化带内积水深度不应超过0.1m，积水时间不应超过2小时",
+    "review_point": "检查绿化带排水系统设置，积水深度和时间是否超标"
+  },
+  {
+    "id": "GB50420-5.0.7",
+    "indicator": "竖向与排水",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.7条",
+    "content": "绿地内排水系统应与城市排水系统衔接，排水管径不应小于DN300，坡度不应小于0.3%",
+    "review_point": "检查排水管径是否≥DN300，坡度是否≥0.3%"
+  },
+  {
+    "id": "GB50420-5.0.8",
+    "indicator": "竖向与排水",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.8条",
+    "content": "绿地内挡土墙高度超过1.5m时应设排水孔，排水孔间距不应大于3.0m，墙后应设碎石排水层",
+    "review_point": "检查挡土墙是否设排水孔，间距是否≤3.0m"
+  },
+  {
+    "id": "GB50420-5.0.9",
+    "indicator": "竖向与排水",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.9条",
+    "content": "绿地内广场和铺装场地应设排水坡度，坡向雨水口或排水沟，排水坡度不应小于0.5%",
+    "review_point": "检查广场和铺装场地排水坡度是否≥0.5%"
+  },
+  {
+    "id": "GB50420-5.0.10",
+    "indicator": "竖向与排水",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第5.0.10条",
+    "content": "绿地内截水沟和排水沟设计应根据汇水面积确定，排水沟宽度不应小于0.2m，起点深度不应小于0.15m",
+    "review_point": "检查排水沟宽度和深度是否满足要求"
+  },
+  {
+    "id": "GB50420-4.0.10",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.10条",
+    "content": "植物配置应采用复层结构，形成乔木、灌木、地被相结合的复层绿化，乔木层、灌木层、地被层覆盖率之和不应小于绿地面积的80%",
+    "review_point": "检查是否采用复层种植结构，覆盖率之和是否≥80%"
+  },
+  {
+    "id": "GB50420-4.0.11",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.11条",
+    "content": "乔木种植间距应根据成年树冠大小确定，一般不小于3.0m，避免过度密植影响植物生长",
+    "review_point": "检查乔木种植间距是否≥3.0m，是否考虑成年树冠"
+  },
+  {
+    "id": "GB50420-4.0.12",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.12条",
+    "content": "行道树种植穴面积不应小于1.5m×1.5m，深度不应小于0.8m，种植穴内应设透气管",
+    "review_point": "检查行道树种植穴面积是否≥1.5m×1.5m，深度是否≥0.8m"
+  },
+  {
+    "id": "GB50420-4.0.13",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.13条",
+    "content": "建筑基础种植应保持适当距离，乔木距建筑外墙不宜小于3.0m，灌木不宜小于1.5m，避免根系破坏基础",
+    "review_point": "检查乔木距建筑外墙是否≥3.0m，灌木是否≥1.5m"
+  },
+  {
+    "id": "GB50420-4.0.14",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地设计规范",
+    "standard_code": "GB 50420-2007",
+    "clause_number": "第4.0.14条",
+    "content": "地下管线正上方不宜种植深根性乔木，管线安全距离范围内应种植浅根性植物或地被",
+    "review_point": "检查地下管线上方是否避免种植深根性乔木"
+  },
+  {
+    "id": "CJJ48-8.1.1",
+    "indicator": "种植设计",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第8.1.1条",
+    "content": "公园植物配置应考虑季相变化，常绿乔木与落叶乔木比例不宜低于3:7，确保四季景观效果",
+    "review_point": "检查常绿与落叶乔木比例是否≥3:7"
+  },
+  {
+    "id": "CJJ48-8.1.2",
+    "indicator": "种植设计",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第8.1.2条",
+    "content": "道路交叉口视距三角形内种植高度不应超过0.7m，转弯处植物不应遮挡行车视线",
+    "review_point": "检查交叉口视距三角形内植物高度是否≤0.7m"
+  },
+  {
+    "id": "CJJ48-8.1.3",
+    "indicator": "种植设计",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第8.1.3条",
+    "content": "水生植物种植区水深应根据植物种类确定，挺水植物0.2-0.4m，浮水植物0.4-0.6m，沉水植物0.6-1.0m",
+    "review_point": "检查水生植物种植水深是否匹配植物种类"
+  },
+  {
+    "id": "CJJ48-8.1.4",
+    "indicator": "种植设计",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clause_number": "第8.1.4条",
+    "content": "儿童活动区周边不宜种植有毒、有刺、易致敏的植物，应选择安全、无伤害性的植物品种",
+    "review_point": "检查儿童活动区周边是否避免种植有毒有刺植物"
+  },
+  {
+    "id": "GB51192-7.2.2",
+    "indicator": "种植设计",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第7.2.2条",
+    "content": "屋顶花园种植应选择浅根系、耐旱、抗风的植物品种，乔木种植位置应与结构柱网对应",
+    "review_point": "检查屋顶花园植物选型是否合理，乔木是否对应结构柱"
+  },
+  {
+    "id": "GB51192-7.2.3",
+    "indicator": "种植设计",
+    "standard_name": "公园设计规范",
+    "standard_code": "GB 51192-2016",
+    "clause_number": "第7.2.3条",
+    "content": "公园种植设计应保留场地内现有健康乔木，古树名木应设置保护范围，保护范围不小于树冠投影外2.0m",
+    "review_point": "检查是否保留现有乔木，古树名木保护范围是否≥树冠投影外2.0m"
+  },
+  {
+    "id": "JGJ155-4.1.9",
+    "indicator": "种植设计",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clause_number": "第4.1.9条",
+    "content": "种植屋面植物选择应根据覆土厚度确定，覆土0.15-0.3m可种地被，0.3-0.6m可种小灌木，0.6-1.0m可种大灌木和小乔木",
+    "review_point": "检查植物种类与覆土厚度是否匹配"
+  },
+  {
+    "id": "GB50180-4.0.10",
+    "indicator": "种植设计",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.10条",
+    "content": "居住区植物配置应以乡土树种为主，外来树种应经过引种试验，乡土树种比例不应小于70%",
+    "review_point": "检查乡土树种比例是否≥70%"
+  },
+  {
+    "id": "GB50180-4.0.11",
+    "indicator": "种植设计",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clause_number": "第4.0.11条",
+    "content": "居住区宅旁绿地种植应避免遮挡底层住户采光，乔木距建筑窗户不宜小于5.0m，种植方向应考虑日照",
+    "review_point": "检查乔木距建筑窗户是否≥5.0m"
+  },
+  {
+    "id": "GBT51346-5.3.2",
+    "indicator": "种植设计",
+    "standard_name": "城市绿地规划标准",
+    "standard_code": "GB/T 51346-2019",
+    "clause_number": "第5.3.2条",
+    "content": "城市绿地种植设计应考虑群落稳定性，单一树种种植比例不宜超过总株数的30%",
+    "review_point": "检查单一树种比例是否≤30%"
+  }
+]

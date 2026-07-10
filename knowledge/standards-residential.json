@@ -1,0 +1,111 @@
+[
+  {
+    "indicator": "消防",
+    "standard_name": "建筑设计防火规范",
+    "standard_code": "GB 50016-2014(2018版)",
+    "clauses": [
+      {
+        "clause_number": "第7.1.8条",
+        "content": "消防车道宽度不应小于4.0m，净高度不应小于4.0m，转弯半径应满足消防车通行要求",
+        "review_point": "检查消防通道宽度是否≥4.0m，净高是否≥4.0m"
+      },
+      {
+        "clause_number": "第7.1.4条",
+        "content": "消防车道边缘距离建筑外墙不宜小于5.0m",
+        "review_point": "检查消防车道与建筑外墙距离是否≥5.0m"
+      },
+      {
+        "clause_number": "第7.1.1条",
+        "content": "街区内的道路应考虑消防车的通行，道路中心线间的距离不宜大于160m",
+        "review_point": "检查道路间距是否≤160m"
+      }
+    ]
+  },
+  {
+    "indicator": "无障碍",
+    "standard_name": "无障碍设计规范",
+    "standard_code": "GB 50763-2012",
+    "clauses": [
+      {
+        "clause_number": "第3.4.2条",
+        "content": "轮椅坡道的坡度不应大于1:12，每段坡道高度不应大于0.8m，水平长度不应大于9.0m",
+        "review_point": "检查坡道坡度是否≤1:12，每段高度是否≤0.8m"
+      },
+      {
+        "clause_number": "第3.3.1条",
+        "content": "无障碍通道宽度不应小于1.2m，入口平台宽度不应小于1.5m",
+        "review_point": "检查无障碍通道宽度是否≥1.2m"
+      }
+    ]
+  },
+  {
+    "indicator": "绿地率",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clauses": [
+      {
+        "clause_number": "第4.0.2条",
+        "content": "新建居住区绿地率不应低于30%，旧区改建项目不应低于25%",
+        "review_point": "检查绿地率是否≥30%（新建）或≥25%（旧区改建）"
+      }
+    ]
+  },
+  {
+    "indicator": "停车位",
+    "standard_name": "城市居住区规划设计标准",
+    "standard_code": "GB 50180-2018",
+    "clauses": [
+      {
+        "clause_number": "第5.0.6条",
+        "content": "居住区机动车停车位配建指标应根据户型、户数确定，一般不少于0.8辆/户",
+        "review_point": "检查停车位数量是否满足配建要求（≥0.8辆/户）"
+      }
+    ]
+  },
+  {
+    "indicator": "台阶及坡度",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clauses": [
+      {
+        "clause_number": "第6.2.3条",
+        "content": "台阶踏步宽度不应小于0.3m，踏步高度不应大于0.15m，台阶数量不应少于2级",
+        "review_point": "检查台阶踏步宽是否≥0.3m，高度是否≤0.15m"
+      },
+      {
+        "clause_number": "第6.2.4条",
+        "content": "坡道坡度不应大于1:8，当坡度大于1:12时应设防滑措施",
+        "review_point": "检查坡道坡度是否≤1:8"
+      }
+    ]
+  },
+  {
+    "indicator": "水深",
+    "standard_name": "公园设计规范",
+    "standard_code": "CJJ 48-2016",
+    "clauses": [
+      {
+        "clause_number": "第7.3.2条",
+        "content": "景观水体近岸2.0m范围内水深不应大于0.7m，超过时应设置防护设施",
+        "review_point": "检查景观水景最大水深是否≤0.7m"
+      }
+    ]
+  },
+  {
+    "indicator": "覆土",
+    "standard_name": "种植屋面工程技术规程",
+    "standard_code": "JGJ 155-2013",
+    "clauses": [
+      {
+        "clause_number": "第4.1.3条",
+        "content": "地下车库顶板种植覆土厚度不应小于0.6m，需满足顶板荷载要求",
+        "review_point": "检查覆土厚度是否≥0.6m，是否说明顶板荷载"
+      },
+      {
+        "clause_number": "第4.1.4条",
+        "content": "乔木种植覆土厚度不应小于0.9m，灌木不应小于0.6m",
+        "review_point": "检查乔木覆土是否≥0.9m，灌木是否≥0.6m"
+      }
+    ]
+  }
+]

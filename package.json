@@ -1,0 +1,27 @@
+{
+  "name": "landscape-ai-backend",
+  "version": "1.0.0",
+  "description": "LandscapeAI 景观设计规范审查后端服务",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "keywords": [
+    "landscape",
+    "ai",
+    "review",
+    "agnes"
+  ],
+  "license": "MIT"
+}

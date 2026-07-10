@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LandscapeAI — 景观方案规范审查</title>
+<style>
+:root {
+  --bg: #F8F9FB;
+  --surface: #FFFFFF;
+  --ink: #1A1D2E;
+  --muted: #6B7280;
+  --muted2: #9CA3AF;
+  --rule: #E5E7EB;
+  --rule2: #F0F1F4;
+  --accent: #635bff;
+  --accent2: #312e81;
+  --accent-light: #EEF0FF;
+  --success: #10b981;
+  --success-light: #ECFDF5;
+  --warning: #F59E0B;
+  --warning-light: #FFFBEB;
+  --error: #EF4444;
+  --error-light: #FEF2F2;
+  --gray-light: #F3F4F6;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "Noto Sans SC", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== APP FRAME (responsive) ===== */
+.proto-frame {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--surface);
+  box-shadow: 0 0 40px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .proto-frame {
+    max-width: 520px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    min-height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+  }
+  body { padding: 0 16px; }
+}
+
+/* ===== PAGE SYSTEM ===== */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+.navbar .logo {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--accent2);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.navbar .logo .icon {
+  width: 24px; height: 24px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 13px; font-weight: 800;
+}
+.navbar .nav-link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.navbar .nav-link:hover { color: var(--accent); }
+
+/* ===== HERO SECTION ===== */
+.hero {
+  padding: 32px 20px 24px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.hero p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  background: var(--accent-light);
+  color: var(--accent2);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.hero .hero-badge .dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--success);
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+  padding: 0 20px 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.form-label .required {
+  color: var(--error);
+  font-size: 12px;
+}
+
+/* --- Project Type Cards --- */
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.type-card {
+  border: 2px solid var(--rule);
+  border-radius: var(--radius-sm);
+  padding: 14px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: var(--surface);
+}
+.type-card:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+.type-card.selected {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.type-card .type-icon {
+  width: 28px; height: 28px;
+  margin: 0 auto 4px;
+  display: flex; align-items: center; justify-content: center;
+}
+.type-card .type-icon svg {
+  width: 24px; height: 24px;
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 1.8;
+  transition: stroke 0.15s ease;
+}
+.type-card.selected .type-icon svg,
+.type-card:hover .type-icon svg {
+  stroke: var(--accent);
+}
+.type-card .type-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.type-card.selected .type-name {
+  color: var(--accent);
+}
+
+/* --- Textarea --- */
+.textarea-wrap {
+  position: relative;
+}
+.textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 12px 14px;
+  border: 2px solid var(--rule);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s ease;
+  line-height: 1.6;
+}
+.textarea:focus {
+  border-color: var(--accent);
+}
+.textarea::placeholder {
+  color: var(--muted2);
+}
+.char-count {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 11px;
+  color: var(--muted2);
+  font-family: monospace;
+}
+.char-count.warn { color: var(--warning); }
+.char-count.error { color: var(--error); }
+
+.input-hint {
+  font-size: 11px;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: none;
+}
+.input-hint.show { display: block; }
+.input-hint.warn {
+  background: var(--warning-light);
+  color: #92400E;
+}
+.input-hint.error {
+  background: var(--error-light);
+  color: #991B1B;
+}
+
+/* --- Example Toggle --- */
+.example-toggle {
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+.example-toggle:hover { text-decoration: underline; }
+.example-box {
+  display: none;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: var(--gray-light);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.example-box:hover { background: var(--rule2); }
+.example-box.show { display: block; }
+
+/* --- Submit Button --- */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.02em;
+}
+.submit-btn:hover {
+  background: var(--accent2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99,91,255,0.3);
+}
+.submit-btn:active {
+  transform: translateY(0);
+}
+.submit-btn:disabled {
+  background: var(--muted2);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.submit-hint {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted2);
+  margin-top: 6px;
+}
+
+.form-error {
+  text-align: center;
+  font-size: 12px;
+  color: var(--error);
+  margin-top: 8px;
+  display: none;
+}
+.form-error.show { display: block; }
+
+/* ===== LOADING STATE ===== */
+.loading-page {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+.loading-page.active { display: flex; }
+
+.loading-animation {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.loading-ring {
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--accent-light);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.loading-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.loading-time {
+  font-size: 12px;
+  color: var(--muted2);
+  font-family: monospace;
+}
+
+/* Loading Steps */
+.loading-steps {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+.loading-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted2);
+  transition: color 0.3s ease;
+}
+.loading-step .step-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--rule);
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+.loading-step.active {
+  color: var(--accent);
+}
+.loading-step.active .step-dot {
+  background: var(--accent);
+  animation: pulse 1.2s ease infinite;
+}
+.loading-step.done {
+  color: var(--success);
+}
+.loading-step.done .step-dot {
+  background: var(--success);
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.loading-extra {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: var(--warning-light);
+  border-radius: 8px;
+  font-size: 12px;
+  color: #92400E;
+  display: none;
+}
+.loading-extra.show { display: block; }
+
+/* ===== TYPE WARNING PAGE ===== */
+.type-warning-card {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 32px 24px;
+  background: var(--accent-light);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+.type-warning-card .tw-icon {
+  width: 48px; height: 48px;
+  margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+}
+.type-warning-card .tw-icon svg {
+  width: 40px; height: 40px;
+  stroke: var(--warning);
+  fill: none;
+  stroke-width: 1.8;
+}
+.type-warning-card .tw-title { font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+.type-warning-card .tw-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+.type-warning-card .tw-suggest { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.type-warning-card .tw-actions { display: flex; gap: 12px; justify-content: center; }
+.type-warning-card .tw-btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+.type-warning-card .tw-btn-secondary { background: var(--surface); color: var(--muted); border: 1px solid var(--rule); }
+.type-warning-card .tw-btn-secondary:hover { background: var(--bg); }
+.type-warning-card .tw-btn-primary { background: var(--accent); color: white; }
+.type-warning-card .tw-btn-primary:hover { background: var(--accent2); }
+
+/* ===== RAG INFO PANEL ===== */
+.rag-info {
+  margin: 0 20px 16px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--accent-light);
+}
+.rag-info-header {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.rag-info-header .rag-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rag-info-header .rag-badge {
+  font-size: 11px;
+  color: var(--accent);
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.rag-info-header .chevron {
+  font-size: 12px;
+  color: var(--muted2);
+  transition: transform 0.2s ease;
+}
+.rag-info.expanded .chevron { transform: rotate(180deg); }
+
+.rag-info-body {
+  display: none;
+  padding: 0 14px 12px;
+  background: #fff;
+}
+.rag-info.expanded .rag-info-body { display: block; }
+
+.rag-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule2);
+  margin-bottom: 8px;
+}
+.rag-stat {
+  font-size: 11px;
+  color: var(--muted);
+}
+.rag-stat strong {
+  color: var(--ink);
+  font-size: 13px;
+  font-family: monospace;
+}
+.rag-distribution {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 6px 0;
+  line-height: 1.6;
+}
+.rag-distribution .dist-tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent2);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin: 2px 2px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.rag-clauses {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+.rag-clause-item {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--rule2);
+  line-height: 1.5;
+}
+.rag-clause-item:last-child { border-bottom: none; }
+.rag-clause-item .clause-score {
+  color: var(--accent);
+  font-family: monospace;
+  font-weight: 600;
+  margin-right: 4px;
+}
+.rag-clause-item .clause-ref {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ===== RESULT PAGE ===== */
+.result-page { display: none; }
+.result-page.active { display: block; }
+
+.result-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--rule);
+}
+.result-header .back-btn {
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+.result-header .back-btn:hover { color: var(--accent); }
+.result-header h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.result-header .meta {
+  font-size: 12px;
+  color: var(--muted2);
+  font-family: monospace;
+}
+
+/* --- Summary Ring --- */
+.summary-ring-section {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.summary-ring {
+  width: 100px; height: 100px;
+  position: relative;
+  flex-shrink: 0;
+}
+.summary-ring svg {
+  width: 100%; height: 100%;
+  transform: rotate(-90deg);
+}
+.summary-ring .ring-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.summary-ring .ring-num {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: monospace;
+  line-height: 1;
+}
+.summary-ring .ring-label {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.summary-text { flex: 1; }
+.summary-text .sum-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.summary-text .sum-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* --- Stats Cards --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 16px 20px;
+}
+.stat-card {
+  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  text-align: center;
+}
+.stat-card .stat-num {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: monospace;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.stat-card .stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.stat-card.red { background: var(--error-light); }
+.stat-card.red .stat-num { color: var(--error); }
+.stat-card.red .stat-label { color: #991B1B; }
+.stat-card.yellow { background: var(--warning-light); }
+.stat-card.yellow .stat-num { color: var(--warning); }
+.stat-card.yellow .stat-label { color: #92400E; }
+.stat-card.green { background: var(--success-light); }
+.stat-card.green .stat-num { color: var(--success); }
+.stat-card.green .stat-label { color: #065F46; }
+.stat-card.gray { background: var(--gray-light); }
+.stat-card.gray .stat-num { color: var(--muted); }
+.stat-card.gray .stat-label { color: var(--muted); }
+
+/* --- Indicator Sections --- */
+.indicator-list {
+  padding: 0 20px 20px;
+}
+.indicator-item {
+  margin-bottom: 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  animation: slideIn 0.3s ease backwards;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.indicator-header {
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: var(--surface);
+}
+.indicator-header:hover { background: var(--gray-light); }
+.indicator-header .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.indicator-header .ind-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.indicator-header .ind-standard {
+  font-size: 11px;
+  color: var(--muted2);
+  font-family: monospace;
+  background: var(--gray-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.indicator-header .right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.indicator-header .chevron {
+  font-size: 12px;
+  color: var(--muted2);
+  transition: transform 0.2s ease;
+}
+.indicator-item.expanded .chevron {
+  transform: rotate(180deg);
+}
+
+.indicator-body {
+  display: none;
+  padding: 0 14px 14px;
+}
+.indicator-item.expanded .indicator-body {
+  display: block;
+}
+
+/* --- Issue Card --- */
+.issue-card {
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 8px;
+}
+.issue-card.red {
+  background: var(--error-light);
+  border-left: 3px solid var(--error);
+}
+.issue-card.yellow {
+  background: var(--warning-light);
+  border-left: 3px solid var(--warning);
+}
+.issue-card.green {
+  background: var(--success-light);
+  border-left: 3px solid var(--success);
+}
+.issue-card.gray {
+  background: var(--gray-light);
+  border-left: 3px solid var(--muted2);
+}
+
+.issue-status {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.issue-status.red { background: var(--error); color: #fff; }
+.issue-status.yellow { background: var(--warning); color: #fff; }
+.issue-status.green { background: var(--success); color: #fff; }
+.issue-status.gray { background: var(--muted); color: #fff; }
+
+.issue-desc {
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.issue-detail {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.issue-detail .label {
+  font-weight: 600;
+  color: var(--ink);
+}
+.issue-ref {
+  font-size: 11px;
+  color: var(--accent);
+  font-family: monospace;
+  margin-top: 4px;
+}
+
+/* --- Feedback Buttons --- */
+.feedback-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+}
+.feedback-btn {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+.feedback-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.feedback-btn.selected {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --- Result Actions --- */
+.result-actions {
+  padding: 16px 20px 24px;
+  display: flex;
+  gap: 10px;
+}
+.btn-secondary {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--rule);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-primary-sm {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+.btn-primary-sm:hover {
+  background: var(--accent2);
+}
+
+/* --- Disclaimer --- */
+.disclaimer {
+  padding: 12px 20px 24px;
+  font-size: 11px;
+  color: var(--muted2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===== ERROR STATE ===== */
+.error-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+.error-state.active { display: flex; }
+.error-icon {
+  width: 56px; height: 56px;
+  background: var(--error-light);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.error-icon svg { width: 28px; height: 28px; stroke: var(--error); fill: none; stroke-width: 1.8; }
+.error-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.error-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.retry-btn {
+  padding: 10px 28px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.retry-btn:hover { background: var(--accent2); }
+
+/* ===== PAGE ANIMATION ===== */
+.page.active {
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  z-index: 200;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+</style>
+</head>
+<body>
+
+<div class="proto-frame">
+
+  <!-- ===== PAGE: HOME ===== -->
+  <div class="page active" id="page-home">
+    <div class="navbar">
+      <div class="logo">
+        <div class="icon">LA</div>
+        LandscapeAI
+      </div>
+      <span class="nav-link" onclick="showToast('RAG 知识库：171 条规范 · 9 项指标')">关于</span>
+    </div>
+
+    <div class="hero">
+      <h1>景观方案规范审查</h1>
+      <p>选择项目类型，输入方案描述<br>AI + RAG 语义检索，15-30 秒完成 9 项规范审查</p>
+      <div class="hero-badge"><span class="dot"></span> 171 条规范 · 9 项指标 · RAG 语义检索</div>
+    </div>
+
+    <div class="form-section">
+      <!-- F1: Project Type -->
+      <div class="form-group">
+        <div class="form-label">
+          项目类型 <span class="required">*</span>
+        </div>
+        <div class="type-grid" id="typeGrid">
+          <div class="type-card" data-type="住宅" onclick="selectType(this)">
+            <div class="type-icon"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M5 10v10h14V10"/></svg></div>
+            <div class="type-name">住宅</div>
+          </div>
+          <div class="type-card" data-type="商业" onclick="selectType(this)">
+            <div class="type-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 8l2-4h14l2 4M9 13h6"/></svg></div>
+            <div class="type-name">商业</div>
+          </div>
+          <div class="type-card" data-type="公园" onclick="selectType(this)">
+            <div class="type-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M12 14v8M8 18h8"/></svg></div>
+            <div class="type-name">公园</div>
+          </div>
+          <div class="type-card" data-type="学校" onclick="selectType(this)">
+            <div class="type-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11v6c0 1 2 2 5 2s5-1 5-2v-6"/></svg></div>
+            <div class="type-name">学校</div>
+          </div>
+          <div class="type-card" data-type="办公" onclick="selectType(this)">
+            <div class="type-icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg></div>
+            <div class="type-name">办公</div>
+          </div>
+          <div class="type-card" data-type="滨水" onclick="selectType(this)">
+            <div class="type-icon"><svg viewBox="0 0 24 24"><path d="M3 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+            <div class="type-name">滨水</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- F2: Description Input -->
+      <div class="form-group">
+        <div class="form-label">
+          方案描述 <span class="required">*</span>
+        </div>
+        <div class="textarea-wrap">
+          <textarea
+            class="textarea"
+            id="descInput"
+            placeholder="输入你的景观方案描述，包括面积、元素、尺寸等信息。例如：本项目为居住区景观设计，总面积约 12000㎡，包含中心花园、儿童活动区、消防通道等..."
+            oninput="handleInput(this)"
+          ></textarea>
+          <div class="char-count" id="charCount">0 / 2000</div>
+        </div>
+        <div class="input-hint warn" id="hintShort">描述过短，请至少输入 20 个字以获得有效审查</div>
+        <div class="input-hint error" id="hintEmpty">请输入方案描述</div>
+        <div class="example-toggle" onclick="toggleExample()">
+          <span id="exToggle">查看示例</span>
+        </div>
+        <div class="example-box" id="exBox" onclick="useExample()">
+          本项目为某居住区景观设计，总面积约 12000 平方米。主要包含：中心花园约 3000 平方米，设有景观水池和休闲步道；儿童活动区约 800 平方米；宅间绿地面积约 5000 平方米。消防通道宽度 3.5 米，环绕整个小区。绿地率约 32%。机动车停车位 45 个，其中地面 15 个、地下 30 个。景观水景最大水深 0.6 米。种植覆土厚度 0.8 米，主要种植乔木和灌木。
+        </div>
+      </div>
+
+      <!-- F3: Submit -->
+      <div class="form-group">
+        <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">开始审查</button>
+        <div class="submit-hint">Ctrl + Enter 快速提交</div>
+        <div class="form-error" id="formError">请先选择项目类型并输入方案描述</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE: LOADING ===== -->
+  <div class="page loading-page" id="page-loading">
+    <div class="loading-animation">
+      <div class="loading-ring"></div>
+    </div>
+    <div class="loading-title" id="loadingTitle">正在检索相关规范</div>
+    <div class="loading-subtitle" id="loadingSubtitle">从 171 条规范中语义匹配最相关条文...</div>
+    <div class="loading-time" id="loadingTime">预计 15-30 秒完成</div>
+    <div class="loading-steps">
+      <div class="loading-step" id="step1">
+        <span class="step-dot"></span>
+        <span>RAG 语义检索规范条文</span>
+      </div>
+      <div class="loading-step" id="step2">
+        <span class="step-dot"></span>
+        <span>AI 逐项审查 9 个指标</span>
+      </div>
+      <div class="loading-step" id="step3">
+        <span class="step-dot"></span>
+        <span>校验结果并生成报告</span>
+      </div>
+    </div>
+    <div class="loading-extra" id="loadingExtra">AI 审查较复杂，正在逐项分析 9 个指标，请耐心等待...</div>
+  </div>
+
+  <!-- ===== PAGE: RESULT ===== -->
+  <div class="page result-page" id="page-result">
+    <div class="navbar">
+      <div class="logo">
+        <div class="icon">LA</div>
+        LandscapeAI
+      </div>
+      <span class="nav-link" onclick="goHome()">返回首页</span>
+    </div>
+
+    <div class="result-header">
+      <div class="back-btn" onclick="goHome()">&#8592; 重新审查</div>
+      <h2>审查结果</h2>
+      <div class="meta" id="resultMeta">项目类型：- | 审查时间：-</div>
+    </div>
+
+    <!-- Summary Ring -->
+    <div class="summary-ring-section" id="summaryRingSection">
+      <div class="summary-ring">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="42" fill="none" stroke="#E5E7EB" stroke-width="8"/>
+          <circle id="ringProgress" cx="50" cy="50" r="42" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="264" style="transition: stroke-dashoffset 0.8s ease;"/>
+        </svg>
+        <div class="ring-center">
+          <div class="ring-num" id="ringNum">0</div>
+          <div class="ring-label" id="ringLabel">通过率</div>
+        </div>
+      </div>
+      <div class="summary-text">
+        <div class="sum-title" id="sumTitle">审查完成</div>
+        <div class="sum-desc" id="sumDesc">请查看下方详细结果</div>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid" id="statsGrid"></div>
+
+    <!-- RAG 检索信息面板 -->
+    <div class="rag-info" id="ragInfo" style="display:none" onclick="toggleRagInfo(this)">
+      <div class="rag-info-header">
+        <div class="rag-title">
+          <span>RAG 规范检索</span>
+          <span class="rag-badge" id="ragBadge">30 / 171</span>
+        </div>
+        <span class="chevron">&#9660;</span>
+      </div>
+      <div class="rag-info-body">
+        <div class="rag-stats" id="ragStats"></div>
+        <div class="rag-distribution" id="ragDistribution"></div>
+        <div class="rag-clauses" id="ragClauses"></div>
+      </div>
+    </div>
+
+    <!-- Indicator List -->
+    <div class="indicator-list" id="indicatorList"></div>
+
+    <!-- Actions -->
+    <div class="result-actions">
+      <div class="btn-secondary" onclick="goHome()">重新审查</div>
+      <div class="btn-primary-sm" onclick="exportReport()">导出报告</div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      AI 审查结果仅供参考，正式报规请以专业审图机构为准<br>
+      LandscapeAI &copy; 2026 · Powered by RAG + AI
+    </div>
+  </div>
+
+  <!-- ===== PAGE: ERROR ===== -->
+  <div class="page error-state" id="page-error">
+    <div class="error-icon"><svg viewBox="0 0 24 24"><path d="M12 2L1 22h22z M12 9v6 M12 18v.5"/></svg></div>
+    <div class="error-title" id="errorTitle">审查超时</div>
+    <div class="error-desc" id="errorDesc">AI 服务响应时间过长，请稍后重试</div>
+    <button class="retry-btn" onclick="retrySubmit()">重试</button>
+  </div>
+
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== STATE =====
+var selectedType = null;
+var loadingTimer = null;
+var loadingStartTime = 0;
+var lastResultData = null;
+var forceReviewFlag = false;
+
+// ===== KEYBOARD SHORTCUT =====
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+    var homeActive = document.getElementById('page-home').classList.contains('active');
+    if (homeActive) handleSubmit();
+  }
+});
+
+// ===== PAGE SWITCH =====
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  var page = document.getElementById(id);
+  if (page) page.classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+// ===== F1: Project Type Selection =====
+function selectType(el) {
+  document.querySelectorAll('.type-card').forEach(function(c) {
+    c.classList.remove('selected');
+  });
+  el.classList.add('selected');
+  selectedType = el.getAttribute('data-type');
+  hideFormError();
+}
+
+// ===== F2: Description Input =====
+function handleInput(el) {
+  var len = el.value.length;
+  var count = document.getElementById('charCount');
+  var hintShort = document.getElementById('hintShort');
+
+  if (len > 2000) {
+    el.value = el.value.substring(0, 2000);
+    len = 2000;
+  }
+
+  count.textContent = len + ' / 2000';
+
+  if (len > 1800) {
+    count.className = 'char-count error';
+  } else if (len > 1500) {
+    count.className = 'char-count warn';
+  } else {
+    count.className = 'char-count';
+  }
+
+  if (len > 0 && len < 20) {
+    hintShort.classList.add('show');
+  } else {
+    hintShort.classList.remove('show');
+  }
+
+  hideFormError();
+}
+
+function toggleExample() {
+  var box = document.getElementById('exBox');
+  var toggle = document.getElementById('exToggle');
+  if (box.classList.contains('show')) {
+    box.classList.remove('show');
+    toggle.textContent = '查看示例';
+  } else {
+    box.classList.add('show');
+    toggle.textContent = '收起示例';
+  }
+}
+
+function useExample() {
+  var exampleText = document.getElementById('exBox').textContent.trim();
+  var textarea = document.getElementById('descInput');
+  textarea.value = exampleText;
+  handleInput(textarea);
+  document.getElementById('exBox').classList.remove('show');
+  document.getElementById('exToggle').textContent = '查看示例';
+  showToast('已填入示例文本');
+}
+
+// ===== F3: Submit =====
+function handleSubmit() {
+  var desc = document.getElementById('descInput').value.trim();
+
+  if (!selectedType) {
+    showFormError('请先选择项目类型');
+    return;
+  }
+  if (!desc) {
+    showFormError('请输入方案描述');
+    return;
+  }
+  if (desc.length < 20) {
+    showFormError('描述过短，请补充更多信息（至少 20 字）');
+    return;
+  }
+
+  hideFormError();
+  startLoading();
+}
+
+function showFormError(msg) {
+  var err = document.getElementById('formError');
+  err.textContent = msg;
+  err.classList.add('show');
+}
+function hideFormError() {
+  document.getElementById('formError').classList.remove('show');
+}
+
+// ===== LOADING FLOW =====
+function startLoading() {
+  showPage('page-loading');
+  loadingStartTime = Date.now();
+
+  var extra = document.getElementById('loadingExtra');
+  extra.classList.remove('show');
+
+  // Reset steps
+  setStepState('step1', 'active');
+  setStepState('step2', '');
+  setStepState('step3', '');
+
+  document.getElementById('loadingTitle').textContent = '正在检索相关规范';
+  document.getElementById('loadingSubtitle').textContent = '从 171 条规范中语义匹配最相关条文...';
+
+  // Step 2: AI review (after 3s)
+  setTimeout(function() {
+    if (document.getElementById('page-loading').classList.contains('active')) {
+      setStepState('step1', 'done');
+      setStepState('step2', 'active');
+      document.getElementById('loadingTitle').textContent = 'AI 正在审查中';
+      document.getElementById('loadingSubtitle').textContent = '对照检索到的规范条文，逐项审查 9 个指标...';
+    }
+  }, 3000);
+
+  // 15s: show patience prompt + step 3
+  setTimeout(function() {
+    if (document.getElementById('page-loading').classList.contains('active')) {
+      extra.classList.add('show');
+      setStepState('step2', 'done');
+      setStepState('step3', 'active');
+    }
+  }, 15000);
+
+  callReviewAPI();
+}
+
+function setStepState(id, state) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.classList.remove('active', 'done');
+  if (state) el.classList.add(state);
+}
+
+// ===== API CALL =====
+async function callReviewAPI() {
+  var desc = document.getElementById('descInput').value.trim();
+
+  try {
+    var controller = new AbortController();
+    var timeoutId = setTimeout(function() {
+      controller.abort();
+    }, 120000);
+
+    var response = await fetch('/api/review', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        projectType: selectedType,
+        description: desc,
+        forceReview: forceReviewFlag
+      }),
+      signal: controller.signal
+    });
+
+    clearTimeout(timeoutId);
+    forceReviewFlag = false;
+
+    var data = await response.json();
+
+    if (data.error) {
+      showError('审查失败', data.message || '请稍后重试');
+      return;
+    }
+
+    if (data.typeWarning) {
+      showTypeWarning(data.typeWarning);
+      return;
+    }
+
+    // Complete loading steps
+    setStepState('step1', 'done');
+    setStepState('step2', 'done');
+    setStepState('step3', 'done');
+
+    renderResult(data);
+    showResult();
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      showError('请求超时', 'AI 服务响应较慢，请检查后端日志或稍后重试');
+    } else {
+      showError('网络错误', '无法连接到服务器，请检查网络后重试');
+    }
+  }
+}
+
+// ===== RENDER RESULT =====
+function renderResult(data) {
+  var result = data.data || data;
+  var rag = data.rag || null;
+  lastResultData = data;
+
+  // Update meta
+  var metaEl = document.getElementById('resultMeta');
+  if (metaEl) {
+    var now = new Date();
+    var ts = now.getFullYear() + '-' +
+      String(now.getMonth() + 1).padStart(2, '0') + '-' +
+      String(now.getDate()).padStart(2, '0') + ' ' +
+      String(now.getHours()).padStart(2, '0') + ':' +
+      String(now.getMinutes()).padStart(2, '0');
+    metaEl.textContent = '项目类型：' + selectedType + ' | 审查时间：' + ts;
+  }
+
+  // Render RAG info
+  renderRagInfo(rag);
+
+  // Render summary ring
+  var stats = result.summary;
+  var total = 9;
+  var passRate = Math.round((stats.passed / total) * 100);
+  var ringColor = passRate >= 60 ? '#10b981' : passRate >= 30 ? '#F59E0B' : '#EF4444';
+
+  var ringProgress = document.getElementById('ringProgress');
+  ringProgress.setAttribute('stroke', ringColor);
+  var circumference = 264; // 2 * PI * 42
+  var offset = circumference - (circumference * passRate / 100);
+  setTimeout(function() {
+    ringProgress.style.strokeDashoffset = offset;
+  }, 100);
+
+  document.getElementById('ringNum').textContent = passRate + '%';
+  document.getElementById('ringNum').style.color = ringColor;
+
+  // Summary text
+  var sumTitle = document.getElementById('sumTitle');
+  var sumDesc = document.getElementById('sumDesc');
+  if (stats.non_compliant > 0) {
+    sumTitle.textContent = '发现 ' + stats.non_compliant + ' 项不合规';
+    sumTitle.style.color = 'var(--error)';
+    sumDesc.textContent = stats.overall_assessment ?
+      stats.overall_assessment.substring(0, 80) + (stats.overall_assessment.length > 80 ? '...' : '') :
+      '请查看下方详细审查结果，重点关注不合规项';
+  } else if (stats.warnings > 0) {
+    sumTitle.textContent = '发现 ' + stats.warnings + ' 项警告';
+    sumTitle.style.color = 'var(--warning)';
+    sumDesc.textContent = stats.overall_assessment ?
+      stats.overall_assessment.substring(0, 80) + (stats.overall_assessment.length > 80 ? '...' : '') :
+      '方案基本合规，建议优化警告项';
+  } else {
+    sumTitle.textContent = '全部指标通过';
+    sumTitle.style.color = 'var(--success)';
+    sumDesc.textContent = stats.overall_assessment ?
+      stats.overall_assessment.substring(0, 80) + (stats.overall_assessment.length > 80 ? '...' : '') :
+      '方案各项指标均符合规范要求';
+  }
+
+  // Stats cards
+  var statsGrid = document.getElementById('statsGrid');
+  statsGrid.innerHTML = '';
+
+  var cards = [
+    { num: stats.non_compliant, label: '不合规', cls: 'red' },
+    { num: stats.warnings, label: '警告', cls: 'yellow' },
+    { num: stats.passed, label: '通过', cls: 'green' },
+    { num: stats.insufficient, label: '信息不足', cls: 'gray' }
+  ];
+
+  cards.forEach(function(c) {
+    var div = document.createElement('div');
+    div.className = 'stat-card ' + c.cls;
+    div.innerHTML = '<div class="stat-num">' + c.num + '</div><div class="stat-label">' + c.label + '</div>';
+    statsGrid.appendChild(div);
+  });
+
+  // Indicator list
+  var list = document.getElementById('indicatorList');
+  list.innerHTML = '';
+
+  var statusMap = {
+    '不合规': 'red', '警告': 'yellow',
+    '通过': 'green', '信息不足': 'gray'
+  };
+
+  result.results.forEach(function(item, idx) {
+    var cls = statusMap[item.status] || 'gray';
+    var issuesHtml = '';
+
+    if (item.issues && item.issues.length > 0) {
+      item.issues.forEach(function(issue) {
+        var issueCls = statusMap[issue.severity] || 'gray';
+        issuesHtml += '<div class="issue-card ' + issueCls + '">' +
+          '<span class="issue-status ' + issueCls + '">' + issue.severity + '</span>' +
+          '<div class="issue-desc">' + issue.description + '</div>';
+
+        if (issue.current_value) issuesHtml += '<div class="issue-detail"><span class="label">当前值：</span>' + issue.current_value + '</div>';
+        if (issue.required_value) issuesHtml += '<div class="issue-detail"><span class="label">要求值：</span>' + issue.required_value + '</div>';
+        if (issue.suggestion) issuesHtml += '<div class="issue-detail"><span class="label">修改建议：</span>' + issue.suggestion + '</div>';
+        if (issue.clause) issuesHtml += '<div class="issue-ref">' + (item.standard_ref || '') + ' ' + issue.clause + '</div>';
+
+        if (item.status !== '通过' && item.status !== '信息不足') {
+          issuesHtml += '<div class="feedback-row">' +
+            '<div class="feedback-btn" onclick="event.stopPropagation();markFeedback(this,\'useful\')">&#128077; 有用</div>' +
+            '<div class="feedback-btn" onclick="event.stopPropagation();markFeedback(this,\'useless\')">&#128078; 无用</div>' +
+            '</div>';
+        }
+        issuesHtml += '</div>';
+      });
+    } else {
+      issuesHtml = '<div class="issue-card ' + cls + '">' +
+        '<span class="issue-status ' + cls + '">' + item.status + '</span>';
+
+      if (item.status === '信息不足' && item.missing_info) {
+        issuesHtml += '<div class="issue-desc">信息不足，无法审查</div>' +
+          '<div class="issue-detail">' + item.missing_info + '</div>';
+      } else if (item.status === '通过') {
+        issuesHtml += '<div class="issue-desc">未发现规范问题</div>';
+      } else {
+        issuesHtml += '<div class="issue-desc">' + item.status + '</div>';
+      }
+
+      issuesHtml += '<div class="issue-ref">' + (item.standard_ref || '') + '</div></div>';
+    }
+
+    var expanded = idx === 0 ? ' expanded' : '';
+    var html = '<div class="indicator-item' + expanded + '" onclick="toggleIndicator(this)" style="animation-delay:' + (idx * 0.05) + 's">' +
+      '<div class="indicator-header">' +
+        '<div class="left">' +
+          '<span class="ind-name">' + item.indicator + '</span>' +
+          '<span class="ind-standard">' + (item.standard_ref || '') + '</span>' +
+        '</div>' +
+        '<div class="right">' +
+          '<span class="issue-status ' + cls + '" style="position:relative;transform:none">' + item.status + '</span>' +
+          '<span class="chevron">&#9660;</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="indicator-body">' + issuesHtml + '</div>' +
+    '</div>';
+
+    list.insertAdjacentHTML('beforeend', html);
+  });
+}
+
+// ===== RENDER RAG INFO =====
+function renderRagInfo(rag) {
+  var panel = document.getElementById('ragInfo');
+  if (!rag || !rag.summary) {
+    panel.style.display = 'none';
+    return;
+  }
+
+  panel.style.display = 'block';
+  var s = rag.summary;
+
+  document.getElementById('ragBadge').textContent = s.totalRetrieved + ' / ' + s.knowledgeBaseSize;
+
+  var statsHtml = '<div class="rag-stat">命中条文 <strong>' + s.totalRetrieved + '</strong></div>' +
+    '<div class="rag-stat">覆盖指标 <strong>' + s.indicatorsCovered + '</strong>/9</div>' +
+    '<div class="rag-stat">平均相似度 <strong>' + (s.avgSimilarity * 100).toFixed(1) + '%</strong></div>' +
+    '<div class="rag-stat">最高相似度 <strong>' + (s.topScore * 100).toFixed(1) + '%</strong></div>' +
+    '<div class="rag-stat">检索耗时 <strong>' + s.retrievalMs + 'ms</strong></div>';
+  document.getElementById('ragStats').innerHTML = statsHtml;
+
+  var distParts = s.distribution.split(' | ');
+  var distHtml = '指标分布：';
+  distParts.forEach(function(p) {
+    distHtml += '<span class="dist-tag">' + p + '</span>';
+  });
+  document.getElementById('ragDistribution').innerHTML = distHtml;
+
+  var clausesHtml = '';
+  rag.retrievedClauses.forEach(function(c) {
+    clausesHtml += '<div class="rag-clause-item">' +
+      '<span class="clause-score">' + (c.score * 100).toFixed(1) + '%</span>' +
+      '<span class="clause-ref">[' + c.standard_code + ' ' + c.clause_number + ']</span> ' +
+      c.content +
+      ' <em style="color:var(--accent2);font-style:normal">(' + c.indicator + ')</em>' +
+    '</div>';
+  });
+  document.getElementById('ragClauses').innerHTML = clausesHtml;
+}
+
+function toggleRagInfo(el) {
+  el.classList.toggle('expanded');
+}
+
+function showResult() {
+  clearTimeout(loadingTimer);
+  showPage('page-result');
+}
+
+function showError(title, desc) {
+  clearTimeout(loadingTimer);
+  document.getElementById('errorTitle').textContent = title || '审查失败';
+  document.getElementById('errorDesc').textContent = desc || '请稍后重试';
+  showPage('page-error');
+}
+
+// ===== TYPE WARNING =====
+function showTypeWarning(warning) {
+  clearTimeout(loadingTimer);
+  var page = document.getElementById('page-loading');
+  if (page) page.classList.remove('active');
+
+  var warnPage = document.getElementById('page-type-warning');
+  if (!warnPage) {
+    warnPage = document.createElement('div');
+    warnPage.id = 'page-type-warning';
+    warnPage.className = 'page';
+    warnPage.innerHTML =
+      '<div class="type-warning-card">' +
+        '<div class="tw-icon"><svg viewBox="0 0 24 24"><path d="M12 2L1 22h22z M12 9v6 M12 18v.5"/></svg></div>' +
+        '<div class="tw-title">项目类型可能不匹配</div>' +
+        '<div class="tw-desc" id="twDesc"></div>' +
+        '<div class="tw-suggest" id="twSuggest"></div>' +
+        '<div class="tw-actions">' +
+          '<button class="tw-btn tw-btn-secondary" onclick="goHome()">返回修改</button>' +
+          '<button class="tw-btn tw-btn-primary" id="twForceBtn" onclick="forceReview()">仍然审查</button>' +
+        '</div>' +
+      '</div>';
+    document.querySelector('.proto-frame').appendChild(warnPage);
+  }
+
+  document.getElementById('twDesc').textContent = warning.message;
+  document.getElementById('twSuggest').innerHTML =
+    '建议关键词：<span style="color:var(--accent2);font-weight:600">' +
+    warning.suggestedKeywords.join('、') + '</span>';
+  showPage('page-type-warning');
+}
+
+function forceReview() {
+  forceReviewFlag = true;
+  startLoading();
+}
+
+function retrySubmit() {
+  startLoading();
+}
+
+// ===== GO HOME (preserve form data) =====
+function goHome() {
+  showPage('page-home');
+}
+
+// ===== EXPORT REPORT =====
+function exportReport() {
+  if (!lastResultData) {
+    showToast('暂无可导出的报告');
+    return;
+  }
+
+  var result = lastResultData.data || lastResultData;
+  var now = new Date();
+  var ts = now.getFullYear() + '-' +
+    String(now.getMonth() + 1).padStart(2, '0') + '-' +
+    String(now.getDate()).padStart(2, '0') + '_' +
+    String(now.getHours()).padStart(2, '0') +
+    String(now.getMinutes()).padStart(2, '0');
+
+  var lines = [];
+  lines.push('LandscapeAI 审查报告');
+  lines.push('生成时间：' + now.toLocaleString('zh-CN'));
+  lines.push('项目类型：' + selectedType);
+  lines.push('');
+
+  var s = result.summary;
+  lines.push('=== 审查摘要 ===');
+  lines.push('不合规：' + s.non_compliant + ' 项');
+  lines.push('警告：' + s.warnings + ' 项');
+  lines.push('通过：' + s.passed + ' 项');
+  lines.push('信息不足：' + s.insufficient + ' 项');
+  if (s.overall_assessment) {
+    lines.push('总体评估：' + s.overall_assessment);
+  }
+  lines.push('');
+
+  lines.push('=== 详细审查结果 ===');
+  result.results.forEach(function(item, idx) {
+    lines.push('');
+    lines.push((idx + 1) + '. ' + item.indicator + ' [' + item.status + ']');
+    lines.push('   规范引用：' + (item.standard_ref || '无'));
+    if (item.issues && item.issues.length > 0) {
+      item.issues.forEach(function(issue, i) {
+        lines.push('   问题 ' + (i + 1) + ' [' + issue.severity + ']：' + issue.description);
+        if (issue.current_value) lines.push('     当前值：' + issue.current_value);
+        if (issue.required_value) lines.push('     要求值：' + issue.required_value);
+        if (issue.suggestion) lines.push('     修改建议：' + issue.suggestion);
+        if (issue.clause) lines.push('     条款：' + issue.clause);
+      });
+    } else if (item.missing_info) {
+      lines.push('   ' + item.missing_info);
+    }
+  });
+
+  lines.push('');
+  lines.push('---');
+  lines.push('AI 审查结果仅供参考，正式报规请以专业审图机构为准');
+  lines.push('LandscapeAI (R) 2026');
+
+  var blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'LandscapeAI_审查报告_' + selectedType + '_' + ts + '.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  showToast('报告已导出');
+}
+
+function toggleIndicator(el) {
+  el.classList.toggle('expanded');
+}
+
+function markFeedback(el, type) {
+  var siblings = el.parentElement.querySelectorAll('.feedback-btn');
+  siblings.forEach(function(s) { s.classList.remove('selected'); });
+  el.classList.add('selected');
+  if (type === 'useful') {
+    showToast('感谢反馈，已标记为有用');
+  } else {
+    showToast('感谢反馈，我们将优化此条审查');
+  }
+}
+
+// ===== TOAST =====
+function showToast(msg) {
+  var toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(function() {
+    toast.classList.remove('show');
+  }, 2500);
+}
+</script>
+
+</body>
+</html>
