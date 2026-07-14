@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: landscape-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: AGNES_API_KEY
+        sync: false
+      - key: AGNES_BASE_URL
+        value: https://apihub.agnes-ai.com/v1
+      - key: AGNES_MODEL
+        value: agnes-2.0-flash
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
+    autoDeploy: true
